@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/jqPaginator.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+
+    <link rel='stylesheet' href='/css/fabiao.css' />
+  </head>
+  <body>
+  <% include haeds.ejs %>
+  <div class="div30"><p><img src="/images/phpwind_03.jpg" alt="">首页>phpwind官方动态>phpwind黑板报</p></div>
+
+  <div style="width:500px;margin:0 auto;">
+    <ul class="pagination" id="pagination1"></ul>
+  </div>
+<div class="div4 clsarfix">
+  <div class="div41">
+    <img src="/images/phpwind_09.jpg" alt="">
+    <p>月明星稀</p>
+    <p>荣誉会员</p>
+    <input type="range">
+    <p>发帖数 3285</p>
+    <p>铜币 1231两</p>
+    <p>威望 1956点</p>
+    <p>贡献 99733点</p>
+    <p>注册日期 2014-09-23</p>
+    <p>最后登录 2016-11-09</p>
+    <p>加关注 写私信</p>
+  </div>
+  <div class="div42">
+
+  </div>
+</div>
+
+      <div style="width:500px;margin:0 auto;">
+        <ul class="pagination" id="pagination1"></ul>
+      </div>
+  <div class="div4 clsarfix">
+      <div><button id="xie">发帖</button><button id="xie1">取消</button></div>
+      <div>
+        <p id="editor1">主题<input type="text" id="zhuTi" name="zhuti" class="input2"></p>
+          <script id="editor" type="text/plain" style="width:900px;height:300px;"></script>
+      </div>
+    <a href="/banzhu"><input type="submit" value="确认" id="b2"></a>
+  </div>
+
+    <script>
+      var ue=UE.getEditor('editor');
+      $("#b2").on('click',function(){
+        var  c = UE.getEditor('editor').getContent();
+        var c1 = $('#zhuTi').val();
+//      alert(c)
+        $.ajax({
+          type: "post",
+          url: "/tiezi",
+          data:{content:c,content1:c1},
+          success:function(data){
+            console.log(data)
+          }
+        })
+      })
+    </script>
+
+
+  <% include bottom.ejs %>
+  </body>
+
+  <script>
+    $("#xie1").click(function(){
+      $("#editor1").hide();
+      $("#editor").hide();
+    });
+
+    $("#xie").click(function(){
+      $("#editor1").show();
+      $("#editor").show();
+    });
+
+  </script>
+  <script type="text/javascript">
+    $.jqPaginator('#pagination1', {
+      totalPages: 10,
+      visiblePages: 5,
+      currentPage: 1,
+      onPageChange: function (num, type) {
+        // $('#p1').text(type + '：' + num);
+        $.ajax({
+          url:'/home/getData',
+          type:'get', //GET
+          async:true, //或false,是否异步
+          data:{  num:num  },
+          timeout:5000,    //超时时间
+          dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+          success:function(data,textStatus,jqXHR){
+
+            $(".list table tbody").empty();
+            for(var i=0;i<data.length;i++){
+              var tr = 	$("<tr></tr>");
+              $("<td></td>").text(data[i].id).appendTo(tr);
+              $("<td></td>").text(data[i].name).appendTo(tr);
+              $("<td></td>").text(data[i].password).appendTo(tr);
+//              $("<td></td>").text(data[i].sex).appendTo(tr);
+              $(".list table tbody").append(tr);
+            }
+          }
+        })
+      }
+    });
+  </script>
+
+
+</html>

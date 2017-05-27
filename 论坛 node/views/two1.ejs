@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/banzhu.css">
+</head>
+<body>
+<form action="/two1">
+  <select name="bk_id" id="">
+    <% for(var i=0;i<bks.length;i++){ %>
+    <option value="<%= bks[i].id %>"> <%= bks[i].name %> </option>
+    <% } %>
+  </select>
+  <input type="text" name="zhutiname">
+  <input type="submit" value="提交">
+</form>
+</body>
+</html>

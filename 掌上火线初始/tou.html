@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div110{ position:fixed;width: 100%}
+        .div1{background: url("../tu/IMG_2342_01_01.jpg") ;width: 100%}
+        .div1 *{float: left;margin-top: 1rem;color: #ffffff;}
+        .div1 img{margin-left:0.2rem}
+        .div1 p{font-size: 0.5rem;margin-left: 1.3rem}
+        .div11 li{float: left;font-size: 0.3rem;margin:0.33rem;
+            color: #808080;}
+        .div11{background-color: #1c1c1c;}
+        .div2{position: fixed;bottom: 0;background-color: #ffffff;}
+        .div2 ul li{float: left;font-size: 0.4rem;margin:0 0.3rem;width: 1rem}
+        .div2 ul li .div21{margin: 0 0.1rem;}
+        .div2 hr{margin-bottom: 0.2rem}
+
+    </style>
+</head>
+<body>
+<div class="div110" >
+    <div class="div1 clsarfix">
+        <img src="../tu/IMG_2348_03_03.jpg" alt="">
+        <p>端游专区</p>
+    </div>
+<div class="div11 clsarfix">
+    <ul>
+        <li>资讯</li>
+        <li>视频</li>
+        <li>赛事</li>
+        <li>活动</li>
+        <li>图片</li>
+    </ul>
+</div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div> {{}}  </div>
+
+
+<div class="div2 clsarfix">
+    <hr>
+    <ul>
+        <li><img src="../tu/IMG_2342_11.jpg" alt="" class="div21"><p>情报站</p></li>
+        <li><img src="../tu/IMG_2342_13.jpg" alt=""><p>好友</p></li>
+        <li><img src="../tu/IMG_2342_15.jpg" alt=""><p>基地</p></li>
+        <li><img src="../tu/IMG_2342_17.jpg" alt=""><p>角色</p></li>
+    </ul>
+</div>
+<script>
+
+
+
+</script>
+
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

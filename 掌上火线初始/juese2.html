@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div110{ position:fixed;width: 100%}
+        .div1{background: url("../tu/IMG_2342_01_01.jpg") ;width: 100%}
+        .div1 *{float: left;margin-top: 1rem;color: #ffffff;}
+        .div1 img{margin-left:0.2rem}
+        .div1 p{font-size: 0.5rem;margin-left: 1.3rem}
+        .div11 li{float: left;font-size: 0.3rem;margin:0.33rem 0.7rem;  }
+        .div10 img {width: 100%;margin-bottom: -0.1rem;margin-top: 0.2rem}
+        .div401{height:0.3rem;background-color: #e3e4e6}
+        .div111 span{margin-right: 1rem;font-size: 0.4rem}
+        .div111 p{margin: 0.2rem}
+        .div111 img{width: 0.4rem}
+        .div111{float: left}
+        .div211 div{float: right}
+        .div50>div>img{width: 45%;height: 5rem;margin-left: 0.2rem}
+        .div50>img{width: 92%;margin-left: 0.2rem}
+        .div50 span img{width: 0.3rem;float: right;margin:0 0.2rem }
+       .div50 span{margin: 0 0.2rem}
+    </style>
+</head>
+<body>
+<div class="div110" >
+    <div class="div1 clsarfix">
+        <img src="../tu/IMG_2348_03_03.jpg" alt="">
+        <p>端游专区</p>
+    </div>
+</div>
+<br/><br/><br/><br/>
+<div class="div10"><img src="../tu/IMG_2356_02.jpg" alt=""></div>
+<div class="div11 clsarfix">
+    <ul>
+        <li>战绩</li>
+        <li>资产</li>
+        <li>记录</li>
+    </ul>
+</div>
+<hr/>
+<div class="div211 clsarfix">
+    <div class="div111">
+    <p>我的仓库</p>
+    <p>
+        <span><img src="../tu/IMG_2357_03.jpg" alt="">25950</span>
+        <span><img src="../tu/IMG_2357_05.jpg" alt="">1709899</span>
+    </p>
+    </div>
+</div>
+<hr class="div401"/>
+<div class="div50">
+    <div>
+        <span>我的装备秀</span>
+        <span><img src="../tu/IMG_2357_10.jpg" alt=""></span>
+        <br/>
+        <br/>
+    </div>
+    <div>
+        <img src="../tu/IMG_2358_03.jpg" alt="">
+        <img src="../tu/IMG_2358_05.jpg" alt="">
+    </div>
+    <img src="../tu/IMG_2358_07.jpg" alt="">
+</div>
+
+
+
+
+
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<script>
+
+</script>
+</body>
+</html>

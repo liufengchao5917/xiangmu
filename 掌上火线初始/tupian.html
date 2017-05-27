@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.4rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div12 input{margin: 0.2rem;font-size: 0.4rem;width: 95%;line-height: 0.7rem}
+        .div12{background-color:#e3e4e6}
+        .div120 img{float: left;width: 4rem;margin: 0.3rem 0.3rem}
+        .div401{height:0.3rem;background-color: #e3e4e6}
+        .div60>div{float: left}
+        .div60 div div{margin:0.3rem 0 0.3rem 0.4rem}
+        .div60 div div img{width: 4rem}
+    </style>
+</head>
+<body>
+    <div class="div12"><input type="text" value="大家在搜：新版本情报站"></div>
+    <div class="div120">
+        <div class="clsarfix">
+            <img src="../tu/IMG_2350_03.jpg" alt="">
+            <img src="../tu/IMG_2350_05.jpg" alt="">
+        </div>
+    </div>
+    <hr class="div401"/>
+    <div class="div60 clsarfix">
+        <div>
+            <div>
+                <img src="../tu/IMG_2350_09.jpg" alt="">
+                <p>表情包分享：面对高手</p>
+                <p>神操作，菜鸟应有的礼</p>
+            </div>
+            <div>
+                <img src="../tu/IMG_2351_03.jpg" alt="">
+                <p>玩家手绘：毛衣小姐姐</p>
+                <p>+头像分享</p>
+            </div>
+            <div>
+                <img src="../tu/IMG_2351_09.jpg" alt="">
+                <p>开心弹药：CF之我们</p>
+                <p>有十八般武艺</p>
+            </div>
+            <div>
+                <img src="../tu/IMG_2352_06.jpg" alt="">
+                <p>爆破模式新地图 炼油</p>
+                <p>工厂细节提前看！</p>
+            </div>
+            <div>
+                <img src="../tu/IMG_2352_11.jpg" alt="">
+                <p>全明星周末：重走火线</p>
+                <p>路 现场高清图集</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="../tu/IMG_2350_11.jpg" alt="">
+                <p>《火线传奇》第三季即</p>
+                <p>将开播！精美壁纸抢先</p>
+            </div>
+            <div>
+                <img src="../tu/IMG_2351_06.jpg" alt="">
+                <p>开心弹药：你的假期是</p>
+                <p>这么过的吗？</p>
+            </div>
+            <div>
+                <img src="../tu/IMG_2352_03.jpg" alt="">
+                <p>《火线传奇》第三季女</p>
+                <p>角色来袭</p>
+            </div>
+            <div>
+                <img src="../tu/IMG_2352_10.jpg" alt="">
+                <p>全明星周末：比赛现场</p>
+                <p>的那些事</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if(clientWidth>=640){
+                            docEl.style.fontSize = '100px';
+                        }else{
+                            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                        }
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</body>
+</html>

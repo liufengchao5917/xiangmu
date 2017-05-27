@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/css/zhuce.css' />
+  </head>
+  <body>
+  <% include haeds.ejs %>
+  <div class="d11">
+  <table >
+    <form action="/pingluns1" method="get" >
+      <input type="hidden" value="<%= pl.id %>" name="id">
+      <p><span>主题:</span><%- pl.zhuti %></p>
+      <p><span>内容:</span><%- pl.name %></p>
+      <span>评论:</span>
+      <input type="text" value="<%= pl.names %>" name="names" />
+      <br/>
+      <input class="input1" type="submit" value="更新">
+    </form>
+  </table>
+  </div>
+  <% include bottom.ejs %>
+  </body>
+</html>
+
+
+

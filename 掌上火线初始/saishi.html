@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div12 input{margin: 0.2rem;font-size: 0.4rem;width: 95%;line-height: 0.7rem}
+        .div12{background-color:#e3e4e6 }
+        .div120 img{float: left;width: 4rem;margin: 0.3rem 0.3rem}
+        .div111{margin: 0.3rem}
+        .div111>*{float: left;margin-right: 0.4rem}
+        .div111>img{width:3rem; }
+        .div111 p{font-size: 42px}
+        .div112{float: right}
+    </style>
+</head>
+<body>
+    <div class="div12"><input type="text" value="大家在搜：新版本情报站"></div>
+    <div class="div120">
+        <div class="clsarfix">
+            <img src="../tu/IMG_2346_03.jpg" alt="">
+            <img src="../tu/IMG_2346_05.jpg" alt="">
+        </div>
+        <hr/>
+    </div>
+    <div>
+        <div class="div111 clsarfix">
+            <img src="../tu/IMG_2346_10.jpg" alt="">
+            <div>
+                <p>降级不可怕！江东弟子</p>
+                <p>多才俊，卷土重来“定...</p>
+                <br/>
+                <span><img src="../tu/IMG_2345_13.jpg" alt="">16.7万</span>
+                <span class="div112">6小时前</span>
+            </div>
+        </div>
+        <hr/>
+        <div class="div111 clsarfix">
+            <img src="../tu/IMG_2346_13.jpg" alt="">
+            <div>
+                <p>不敌AE再度降级 细数情</p>
+                <p>久CFPL赛场沉浮史</p>
+                <br/>
+                <span><img src="../tu/IMG_2345_13.jpg" alt="">10.2万</span>
+                <span class="div112">6小时前</span>
+            </div>
+        </div>
+        <hr/>
+        <div class="div111 clsarfix">
+            <img src="../tu/IMG_2347_03.jpg" alt="">
+            <div>
+                <p>CFPL半决赛前沿 相赢</p>
+                <p>AG宠儿欧欧至关重要</p>
+                <br/>
+                <span><img src="../tu/IMG_2345_13.jpg" alt="">14.5万</span>
+                <span class="div112">05-09</span>
+            </div>
+        </div>
+        <hr/>
+        <div class="div111 clsarfix">
+            <img src="../tu/IMG_2347_06.jpg" alt="">
+            <div>
+                <p>保级赛数据榜：调调狙</p>
+                <p>神表现难救主 林肯M4...</p>
+                <br/>
+                <span><img src="../tu/IMG_2345_13.jpg" alt="">14.5万</span>
+                <span class="div112">05-09</span>
+            </div>
+        </div>
+        <hr/>
+        <div class="div111 clsarfix">
+            <img src="../tu/IMG_2347_06.jpg" alt="">
+            <div>
+                <p>CFPL S10保级赛MVP榜</p>
+                <p>肖奇伦稳居榜首</p>
+                <br/>
+                <span><img src="../tu/IMG_2345_13.jpg" alt="">5.8万</span>
+                <span class="div112">05-09</span>
+            </div>
+        </div>
+        <hr/>
+    </div>
+
+
+
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if(clientWidth>=640){
+                            docEl.style.fontSize = '100px';
+                        }else{
+                            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                        }
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</body>
+</html>

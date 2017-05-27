@@ -1,0 +1,19 @@
+*{margin:0;padding:0;list-style: none;text-decoration: none;}
+.clsarfix:after{
+    content:'';
+    display:block;
+    clear: both;
+    font-size: 0;
+    visibility: hidden;
+    height: 0;
+}
+.div3{margin:20px auto;width:340px;background: #b0b2b2
+}
+.div3 input{float: right;font-size: 20px;border-radius: 3px}
+.div3 p{font-size: 20px}
+.div3>form>input{margin-right: 50px}
+.div31{height: 300px;width: 900px;margin: 0 auto}
+.d11{margin: 0 auto;width: 900px;}
+span{font-weight: 800;margin: 5px}
+input{width: 200px;font-size: 25px}
+.input1{width: 100px;font-size: 20px;margin-left: 150px}

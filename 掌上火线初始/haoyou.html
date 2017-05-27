@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        /*div{text-align: center}*/
+        .div110{ position:fixed;width: 100%}
+        .div1{background: url("../tu/IMG_2342_01_01.jpg") ;width: 100%}
+        .div1 *{float: left;margin-top: 1rem;color: #ffffff;}
+        .div1 img{margin-left:0.2rem}
+        .div1 p{font-size: 0.5rem;margin-left: 1.3rem}
+        .div2{position: fixed;bottom: 0;text-align: center;background-color: #ffffff;}
+        .div2 ul li{float: left;font-size: 0.4rem;margin:0 0.3rem;width: 1rem}
+        .div2 hr{margin-bottom: 0.2rem}
+        .div401{height:0.3rem;background-color: #e3e4e6}
+        .div402{margin-left: 0.2rem}
+        .div402>div{float: left}
+        .div402>p{float: right}
+        .div4011 .div4012{float: left}
+        .div4011 .div4013{float: right}
+        .div5012{margin: 0.2rem 0}
+        .div4021 {float: left;margin: 0.2rem 0.2rem}
+        .div4021 p{margin: 0.2rem 0}
+        .div4022{margin: 0.4rem 0.2rem}
+        .div4023{margin: 0.2rem 0;width:1.5rem}
+    </style>
+</head>
+<body>
+<div class="div110" >
+    <div class="div1 clsarfix">
+        <img src="../tu/IMG_2348_03_03.jpg" alt="">
+        <p>通信录</p>
+        <p>+</p>
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div> {{}}  </div>
+
+<div>
+    <div><img src="../tu/IMG_2353_03.jpg" alt=""><span>好友验证</span><span>&gt;</span></div>
+    <hr class="div401"/>
+    <p><span>∧</span>掌火好友</p>
+    <hr class="div401"/>
+    <div class="div4011 clsarfix">
+            <p class="div4012"><span>∧</span>游戏好友</p>
+            <p class="div4013">黑龙江一区 <span>↔</span></p>
+
+    </div>
+        <hr class="div5012"/>
+    <div class="div402 clsarfix">
+        <div class="div4023"><img src="../tu/IMG_2353_06.jpg" alt=""></div>
+        <div class="div4021 clsarfix">
+            <p>Sunny_福多多：</p>
+            <img src="../tu/IMG_2353_08.jpg" alt=""><span>Lv42</span>
+        </div>
+        <p class="div4022">▪ 离线</p>
+    </div>
+    <hr/>
+    <div class="div402 clsarfix">
+        <div class="div4023"><img src="../tu/IMG_2353_12.jpg" alt=""></div>
+        <div class="div4021 clsarfix">
+            <p>泣魄：</p>
+            <img src="../tu/IMG_2353_13.jpg" alt=""><span>Lv57</span>
+        </div>
+        <p class="div4022">▪ 离线</p>
+    </div>
+    <hr/>
+    <div class="div402 clsarfix">
+        <div class="div4023"><img src="../tu/IMG_2353_16.jpg" alt=""></div>
+        <div class="div4021 clsarfix">
+            <p>暗騒</p>
+            <img src="../tu/IMG_2353_17.jpg" alt=""><span>Lv68</span>
+        </div>
+        <p class="div4022">▪ 离线</p>
+    </div>
+    <hr/>
+    <div class="div402 clsarfix">
+        <div class="div4023"><img src="../tu/IMG_2353_20.jpg" alt=""></div>
+        <div class="div4021 clsarfix">
+            <p>乐乐来了哈</p>
+            <img src="../tu/IMG_2353_21.jpg" alt=""><span>Lv51</span>
+        </div>
+        <p class="div4022">▪ 离线</p>
+    </div>
+
+
+
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+<div class="div2 clsarfix">
+    <hr/>
+    <ul>
+        <li><img src="../tu/IMG_2342_11.jpg" alt=""><p>情报站</p></li>
+        <li><img src="../tu/IMG_2342_13.jpg" alt=""><p>好友</p></li>
+        <li><img src="../tu/IMG_2342_15.jpg" alt=""><p>基地</p></li>
+        <li><img src="../tu/IMG_2342_17.jpg" alt=""><p>角色</p></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<script>
+
+</script>
+</body>
+</html>

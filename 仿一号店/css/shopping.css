@@ -1,0 +1,71 @@
+.all{width: 100%}
+.div1{height: 50px;background-color: #DDDDDD;position: relative}
+.s11,.s111,.s112,.s113,.s114,.s115{position:absolute;width: 208px;height: 157px;border:1px solid black;
+    margin-top: 40px;}
+.s11{background:url("../images/321.jpg") no-repeat;}
+.s111{margin-left:450px;background:url("../images/322.jpg") no-repeat;}
+.s112{margin-left:670px;background:url("../images/323.jpg") no-repeat;}
+.s113{margin-left:740px;background:url("../images/324.jpg") no-repeat;}
+.s114{margin-left:820px;background:url("../images/332.jpg") no-repeat;}
+.s115{margin-left:970px;background:url("../images/333.jpg") no-repeat;}
+.div1 div ul li a{float: left;margin-left: 20px;margin-top: 18px;}
+.div1 div ul li div{display: none}
+.div1 div ul li .div121{margin-left: 300px}
+.div2{width: 1200px;}
+.div2 img{float: left}
+.div2 input{width: 400px;height: 45px;border: 3px solid red;float: left;margin-left: 70px;margin-top: 20px}
+.div2 button{height: 45px;width: 100px;background-color: red;float: left;margin-top: 20px}
+.div21{height: 45px;border: 1px solid #ABABAB;width: 150px;float: left;margin: 20px 70px}
+.div2 p,.div2 div a img{float: left;margin-top: 10px;font-size: 16px}
+.div3{height:40px }
+.div3 li{float: left;font-size: 16px;margin-left: 24px}
+.div31{background-color: red;height: 40px;width: 200px;padding:5px 20px 5px 20px;margin-top: -5px}
+.div3 .div32{margin-left: 20px}
+.p11{display: none;position: absolute;width: 250px;height: 200px;margin-left: -20px;background-color: red;}
+.div4{height:160px;background-color: #DDDDDD;}
+.div4 p,.div4 img{float: left}
+.div41{width: 1200px;height: 50px}
+.div41 p{line-height: 20px;font-size: 20px}
+.div42{line-height: 16px;font-size: 16px;color: #000000;margin-top: 5px;margin-left: 5px}
+.div43{margin-top: 30px;margin-left: -340px}
+.div44{border: 1px solid red;padding: 5px 30px;margin-left: 350px;margin-top:40px}
+.div44 a{color: red;font-size:20px}
+.div45{border: 1px solid red;padding: 5px 30px;background-color: red;margin-left:20px;margin-top: 40px}
+.div45 a{font-size: 20px;color: #ffffff}
+
+.div5{position:relative;height: 420px;}
+#div511{overflow: hidden;float: left;height: 320px}
+.div51{float: left;margin-bottom: 20px;}
+.div511{float: left;height: 100px;width: 280px;margin:20px 10px;}
+.div511 a,.div511 p,.div511 img{float: left;margin-left: 5px}
+.div511 a,.div511 p{color: #000000}
+.div5 .div50{font-size: 20px;color: #000000;margin-top: 10px}
+.div511 .div512{color: red;line-height: 30px;}
+.div511 .div513{margin-left: -40px;margin-top: 35px;display: none}
+.div52{float: left;position: absolute;left: 50%;margin-left: -120px;margin-top: 300px}
+.div52 li{float: left;width: 40px ;height:40px;background-color: #dddddd;border-radius: 20px;color: #000000;
+    font-size: 20px;line-height:13px;padding: 13px;margin: 10px}
+.div5 img:hover{transform:translate(-10px)}
+
+.div700{height: 280px;overflow: hidden}
+.div70{text-align:center;width: 280px;height: 260px;border: 1px solid #000000;padding:10px;
+    float: left;margin: 10px}
+.div71{font-size:16px;color: #000000}
+.div70 p{color: red;}
+.div70 span{color: #000000}
+.div72{margin: 0 40px;font-size: 20px;color: #ABABAB}
+#div72{margin-top: 50px}
+
+.tu1{height: 100px;width:100%;border:1px solid #FFFFFF;position: absolute;
+    margin-top: 10px}
+.tu1 img{width: 100%}
+
+.fix{margin-top: 150px}
+.fix1,.fix2{width:287px;height: 256px;border-radius: 10px;
+    float: left;margin: 0 5px}
+.fix2{text-align: center;border: 1px solid #dddddd}
+.fix11{width: 280px;}
+
+#div00{margin-top: 20px;text-align: center;line-height: 20px}
+
+

@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.menu{
+     width:100px;
+     float: left;
+     padding: 20px;
+     border-right:1px solid #f00;
+     height: 100%;
+
+}
+.content{
+    float: left;
+    width:800px;
+}
+.content iframe{
+    width:800px;
+    height: 600px;
+
+}

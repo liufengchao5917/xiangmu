@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div>{{tou}}</div>
+    <div class="div2 clsarfix">
+        <hr>
+        <ul>
+            <li><img src="../tu/IMG_2342_11.jpg" alt="" class="div21"><p>情报站</p></li>
+            <li><img src="../tu/IMG_2342_13.jpg" alt=""><p>好友</p></li>
+            <li><img src="../tu/IMG_2342_15.jpg" alt=""><p>基地</p></li>
+            <li><img src="../tu/IMG_2342_17.jpg" alt=""><p>角色</p></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    export default {
+        name: 'di',
+        data (){
+            return {
+
+
+            }
+
+        }
+    }
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<style scoped>
+    .div2{position: fixed;bottom: 0;background-color: #ffffff;}
+    .div2 ul li{float: left;font-size: 0.4rem;margin:0 0.3rem;width: 1rem}
+    .div2 ul li .div21{margin: 0 0.1rem;}
+    .div2 hr{margin-bottom: 0.2rem}
+</style>
+<style>
+    *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}
+    .clsarfix:after{
+        content:'';
+        display:block;
+        clear: both;
+        font-size: 0;
+        visibility: hidden;
+        height: 0;
+    }
+</style>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+</body>
+</html>

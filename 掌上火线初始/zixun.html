@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div12 input{margin: 0.2rem;font-size: 0.4rem;width:50%;line-height: 0.7rem;padding: 0 2.2rem}
+        .div12{background-color:#e3e4e6 }
+        .div111{margin: 0.3rem}
+        .div111>*{float: left;margin-right: 0.4rem}
+        .div111>img{width:3rem; }
+        .div111 p{font-size: 42px}
+        .div112{float: right}
+
+        .box{
+            width: 9.8rem;
+            /*width: 478px;*/
+            height: 400px;
+            border: 1px solid #000;
+            margin:30px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .box img{width: 9.8rem}
+        .box ul{
+            width: 1000%;
+            height: 276px;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        .box ul li{
+            float: left;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        .box ol{
+            width: 4.3rem;
+            height: 20px;
+            position: absolute;
+            bottom: 30px;
+            right:100px;
+            text-align: center;
+            line-height: 20px;
+        }
+        ol li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 10px;
+            margin:5px;
+        }
+        ol .active{
+            background-color: red;
+        }
+        a{
+            text-decoration: none;
+            font-size: 24px;
+            color:#fff;
+        }
+        #left,#right{
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background: #000;
+            position: absolute;
+            top:50%;
+            margin-top: -20px;
+        }
+        #left{
+            left:0;
+        }
+        #right{
+            right:0;
+        }
+        .box:hover #left,.box:hover #right{
+            background: rgba(0,0,0,0.5);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="div12">
+        <input name="text2" type="text" id="main_search3" class="gray_input" value="大家在搜：新版本情报站"/>
+    </div>
+    <div class="box">
+        <ul>
+            <li><a href="#"><img src="../tu/IMG_2342_02.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="../tu/IMG_2343_02.jpg" alt=""/></a></li>
+        </ul>
+        <ol>
+            <li></li>
+            <li></li>
+        </ol>
+        <a href="javascript:void(0);" id="left">&lt;</a>
+        <a href="javascript:void(0);" id="right">&gt;</a>
+    </div>
+    <div class="div111 clsarfix">
+        <img src="../tu/IMG_2342_05.jpg" alt="">
+        <div>
+            <p>新版本专题上线：5月</p>
+            <p>10,11日全网更新！</p>
+            <br/>
+            <span><img src="../tu/IMG_2345_13.jpg" alt="">921.7万</span>
+            <span class="div112">04-27</span>
+        </div>
+    </div>
+    <hr/>
+    <div class="div111 clsarfix">
+        <img src="../tu/IMG_2342_08.jpg" alt="">
+        <div>
+            <p>《你好火线君》：金戈</p>
+            <p>铁马，英雄男儿</p>
+            <br/>
+            <span><img src="../tu/IMG_2345_13.jpg" alt="">14.8万</span>
+            <span class="div112">2小时前</span>
+        </div>
+    </div>
+</body>
+
+
+
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<script>
+    $("ol li").mouseover(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+        var index=$(this).index();      i=index;
+        $("ul li").eq(index).show().siblings().hide();
+    });
+    var timer=setInterval(move,1000);
+    var i=0;
+    function move(){if(i==4){i=0;}
+        $("ol li").eq(i).addClass("active").siblings().removeClass("active");
+        $("ul li").eq(i).show().siblings().hide();
+        i++;}
+    $(".box ul li").mouseover(function(){clearInterval(timer);});
+    $(".box ul li").mouseout(function(){timer=setInterval(move,1000);});
+    $("#right").click(function(){move();});
+    function move2(){i--;if(i==-1){i=3;}
+        $("ol li").eq(i).addClass("active").siblings().removeClass("active");
+        $("ul li").eq(i).show().siblings().hide();}
+    $("#left").click(function(){move2();});
+</script>
+
+</html>

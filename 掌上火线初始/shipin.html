@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}\
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div12 input{margin: 0.2rem;font-size: 0.4rem;width: 95%;line-height: 0.7rem}
+        .div12{background-color:#e3e4e6}
+        .div120{width: 9.8rem}
+        .div41{background-color:#e3e4e6;height: 1.7rem}
+        .div41 ul li{float: left;margin: 0.2rem 0.58rem;}
+        .div41 ul li *{font-size: 0.4rem;width: 0.8rem}
+        .div40{float: left;margin:0 0 0.2rem 0.3rem}
+        .div40>img{width: 4.4rem}
+        .div40 p{font-size: 36px}
+        .div112{float: right}
+    </style>
+</head>
+<body>
+    <div class="div12"><input type="text" value="大家在搜：新版本情报站"></div>
+    <img class="div120" src="../tu/IMG_2344_06.jpg" alt="">
+    <div class="div41">
+        <ul>
+            <li><img src="../tu/IMG_2344_09.jpg" alt=""><p>直播</p></li>
+            <li><img src="../tu/IMG_2344_11.jpg" alt=""><p>排行</p></li>
+            <li><img src="../tu/IMG_2344_13.jpg" alt=""><p>栏目</p></li>
+            <li><img src="../tu/IMG_2344_15.jpg" alt=""><p>关注</p></li>
+            <li><img src="../tu/IMG_2344_17.jpg" alt=""><p>分类</p></li>
+        </ul>
+    </div>
+    <div class="clsarfix">
+        <br/>
+        <div class="div40">
+            <img src="../tu/IMG_2344_25.jpg" alt="">
+            <p>70kg快到让你怀疑自己的</p>
+            <p>眼睛</p>
+            <span><img src="../tu/IMG_2345_13.jpg" alt="">2万</span>
+            <span class="div112">3小时前</span>
+        </div>
+        <div class="div40">
+            <img src="../tu/IMG_2344_27.jpg" alt="">
+            <p>70kg甩狙到极致 花式秀四</p>
+            <p>杀看花眼</p>
+            <span><img src="../tu/IMG_2345_13.jpg" alt="">1.3万</span>
+            <span class="div112">3小时前</span>
+        </div>
+        <div class="div40">
+            <img src="../tu/IMG_2344_27.jpg" alt="">
+            <p>70kg破点狙+灭队狙 演绎</p>
+            <p>最强爆破狙</p>
+            <span><img src="../tu/IMG_2345_13.jpg" alt="">7226</span>
+            <span class="div112">3小时前</span>
+        </div>
+        <div class="div40">
+            <img src="../tu/IMG_2344_27.jpg" alt="">
+            <p>狙神70kg狙随心动 亦如人</p>
+            <p>枪合一nice</p>
+            <span><img src="../tu/IMG_2345_13.jpg" alt="">9042</span>
+            <span class="div112">3小时前</span>
+        </div>
+        <div class="div40">
+            <img src="../tu/IMG_2344_27.jpg" alt="">
+            <p>70kg职业开黑大杀四方 遭</p>
+            <p>受到从天而降的惩罚</p>
+            <span><img src="../tu/IMG_2345_13.jpg" alt="">9040</span>
+            <span class="div112">3小时前</span>
+        </div>
+        <div class="div40">
+            <img src="../tu/IMG_2344_27.jpg" alt="">
+            <p>【一部十杀】第64期 S10</p>
+            <p>对阵PENTA新人米亚帅...</p>
+            <span><img src="../tu/IMG_2345_13.jpg" alt="">2039</span>
+            <span class="div112">3小时前</span>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if(clientWidth>=640){
+                            docEl.style.fontSize = '100px';
+                        }else{
+                            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                        }
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</body>
+</html>

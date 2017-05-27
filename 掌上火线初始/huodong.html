@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.4rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div12 input{margin: 0.2rem;font-size: 0.4rem;width: 95%;line-height: 0.7rem}
+        .div12{background-color:#e3e4e6}
+        .div41{height: 1.7rem}
+        .div41 ul li{float: left;margin: 0.2rem 0.2rem;width: 2rem}
+        .div41 ul li *{font-size: 0.4rem;}
+        .div41 ul li img{width: 1rem;margin: 0 0.3rem}
+        .div401{height:0.3rem;background-color: #e3e4e6}
+        .div402 p{float: left;margin: 0.2rem 0.3rem;font-size:0.4rem;}
+        .div402 img{float: right;margin: 0.2rem 0.3rem;width:0.4rem;}
+        .div50 div{float: left;margin: 0.2rem 0.2rem 0.2rem 0.2rem }
+        .div500 img{width: 4rem}
+        .div5010{font-size: 0.5rem}
+        .div5010 span{border: 1px solid #ff3900;border-radius: 5px;font-size: 0.35rem;color:#ff3900}
+        .div5011{color:#17b825}
+        .div5011 span{color:#aaaaaa}
+        .div502{margin-left: 0.2rem;color:#aaaaaa}
+        .div5012{margin: 0.3rem 0}
+    </style>
+</head>
+<body>
+    <div class="div12"><input type="text" value="大家在搜：新版本情报站"></div>
+    <div class="div41">
+        <ul>
+            <li><img src="../tu/IMG_2348_03.jpg" alt=""><p>幸运抽奖</p></li>
+            <li><img src="../tu/IMG_2348_05.jpg" alt=""><p>赛事竞猜</p></li>
+            <li><img src="../tu/IMG_2348_07.jpg" alt=""><p>王者宝藏</p></li>
+            <li><img src="../tu/IMG_2348_09.jpg" alt=""><p>灵狐的约定</p></li>
+        </ul>
+    </div>
+    <br>
+    <hr class="div401"/>
+    <div class="div402 clsarfix">
+        <p>最新活动</p>
+        <img src="../tu/IMG_2348_15.jpg" alt="">
+        <br/>
+    </div>
+    <div>
+        <div class="div50 clsarfix">
+            <div class="div500"><img src="../tu/IMG_2348_19.jpg" alt=""></div>
+            <div class="div501">
+                <p class="div5010">夺宝奇兵 <span>NEW</span></p>
+                <br/>
+                <p class="div5011">进行中 <span>(05.09-05.31)</span></p>
+                <img src="../tu/IMG_2348_24.jpg" alt="">
+            </div>
+        </div>
+        <p class="div502">活动奖励：AN94-暗金风暴、9A91-翡翠、金砖等</p>
+        <hr class="div5012"/>
+    </div>
+    <div>
+        <div class="div50 clsarfix">
+            <div class="div500"><img src="../tu/IMG_2348_22.jpg" alt=""></div>
+            <div class="div501">
+                <p class="div5010">永久幸运星 <span>NEW</span></p>
+                <br/>
+                <p class="div5011">进行中 <span>(05.09-05.31)</span></p>
+                <img src="../tu/IMG_2348_24.jpg" alt="">
+            </div>
+        </div>
+        <p class="div502">活动奖励：永久：南瓜背包、南瓜手雷、南瓜面具</p>
+        <hr class="div5012"/>
+    </div>
+    <div>
+        <div class="div50 clsarfix">
+            <div class="div500"><img src="../tu/IMG_2349_03.jpg" alt=""></div>
+            <div class="div501">
+                <p class="div5010">5月千变轮回 试了才知</p>
+                <p class="div5010">道</p>
+                <p class="div5011">进行中 <span>(05.09-05.31)</span></p>
+                <img src="../tu/IMG_2349_06.jpg" alt="">
+            </div>
+        </div>
+        <p class="div502">活动奖励：无影、黑龙、擎天</p>
+        <hr class="div5012"/>
+    </div>
+    <div>
+        <div class="div50 clsarfix">
+            <div class="div500"><img src="../tu/IMG_2349_10.jpg" alt=""></div>
+            <div class="div501">
+                <p class="div5010">电脑管家特权礼包</p>
+                <br>
+                <p class="div5011">进行中 <span>(05.09-05.31)</span></p>
+                <img src="../tu/IMG_2348_24.jpg" alt="">
+            </div>
+        </div>
+        <p class="div502">活动奖励：M37-恶棍、斯太尔潜龙、活力灵狐</p>
+        <hr class="div5012"/>
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if(clientWidth>=640){
+                            docEl.style.fontSize = '100px';
+                        }else{
+                            docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                        }
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</body>
+</html>

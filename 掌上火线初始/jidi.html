@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title></title>
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div41{height: 1.7rem}
+        .div41 ul li{float: left;margin: 0.2rem 0.6rem;width: 2rem}
+        .div41 ul li *{font-size: 0.4rem;}
+        .div41 ul li img{width: 1rem;margin: 0 0.3rem}
+        .div401{height:0.3rem;background-color: #e3e4e6}
+        .div4011 span:nth-child(1){float: left;font-size: 0.5rem;margin: 0.3rem 0.4rem}
+        .div4011 span:nth-child(2){float: right;font-size: 0.5rem;margin: 0.3rem 0.4rem}
+    </style>
+</head>
+<body>
+    <div class="div41 clsarfix">
+        <ul>
+            <li><img src="../tu/IMG_2354_03.jpg" alt=""><p>幸运抽奖</p></li>
+            <li><img src="../tu/IMG_2354_05.jpg" alt=""><p>赛事竞猜</p></li>
+            <li><img src="../tu/IMG_2354_07.jpg" alt=""><p>王者宝藏</p></li>
+        </ul>
+    </div>
+    <br/>
+    <hr class="div401"/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2354_16.jpg" alt="">火线时刻</span>
+        <span>&gt;</span>
+    </div>
+    <hr/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2354_19.jpg" alt="">王者宝藏</span>
+        <span>&gt;</span>
+    </div>
+    <hr/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2354_21.jpg" alt="">道聚城</span>
+        <span>&gt;</span>
+    </div>
+    <hr/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2354_23.jpg" alt="">周边商城</span>
+        <span>&gt;</span>
+    </div>
+    <hr class="div401"/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2354_25.jpg" alt="">火线论坛</span>
+        <span>&gt;</span>
+    </div>
+    <hr/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2354_27.jpg" alt="">火线百科</span>
+        <span>&gt;</span>
+    </div>
+    <hr/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2355_03.jpg" alt="">火线助手</span>
+        <span>&gt;</span>
+    </div>
+    <hr/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2355_06.jpg" alt="">我的任务</span>
+        <span>&gt;</span>
+    </div>
+    <hr/>
+    <div class="div4011 clsarfix">
+        <span><img src="../tu/IMG_2355_08.jpg" alt="">地图点位</span>
+        <span>&gt;</span>
+    </div>
+    <hr class="div401"/>
+    <br/>
+
+
+
+
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</body>
+</html>

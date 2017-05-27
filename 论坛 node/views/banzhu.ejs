@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/jqPaginator.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css"/>
+
+    <link rel='stylesheet' href='/css/banzhu.css' />
+  </head>
+  <body>
+
+  <% include haeds.ejs %>
+    <div class="div30"><p><img src="/images/phpwind_03.jpg" alt="">首页>phpwind官方动态>phpwind黑板报</p></div>
+  <div class="div3 clsarfix">
+    <div class="div31 clsarfix">
+      <div>
+        <p>phpwind黑板报</p>
+        <p>今日：0 主题：574 总贴：157834</p>
+        <p>版主：浩瀚 星空</p>
+        <p>phpwind零距离接触，公布官方最新动态......</p>
+        <div>
+          <p><img src="" alt="">发帖</p>
+        </div>
+      </div>
+
+
+      <div>
+        <div style="width:500px;margin:0 auto;">
+          <ul class="pagination" id="pagination1"></ul>
+        </div>
+      </div>
+
+
+
+      <div><a href="/banzhu">版主</a></div>
+      <div class="div56">
+
+        <% for(var i=0;i<bz.length;i++){ %>
+        <div class="bian1">
+          <input type="hidden" value="<%= bz[i].id %>">
+          <h4><%- bz[i].zhuti %></h4>
+          <p><%- bz[i].name %></p>
+          <a href="/banzhuone/<%= bz[i].id %>" class="d11">写评论</a>
+
+          <p><span>评论：</span>
+            <% for(var j=0;j<ps.length;j++){ %>
+            <% if(bz[i].id==ps[j].ida){ %>
+            <%= ps[j].pingluna %>
+            <% } %>
+            <% } %>
+          </p>
+        </div>
+        <% } %>
+
+
+      </div>
+
+
+
+      <a href="/fabiao">写版面</a>
+
+    </div>
+    <div class="div32 clsarfix">
+      <button><a href="/denglu">登录</a></button>
+      <button><a href="/zhuce">立即注册</a></button>
+      <br/>
+      <br/>
+      <h3>板块列表</h3>
+      <hr/>
+      <div class="clsarfix">
+        <p><span class="pLift">phpwind官方动态</span><span class="pRight">∧</span></p>
+        <p><span class="pLift">phpwindFans</span><span class="pRight">∨</span></p>
+        <p><span class="pLift">phpwind先进版9.x</span><span class="pRight">∨</span></p>
+        <p><span class="pLift">phpwind稳定版8.x</span><span class="pRight">∨</span></p>
+        <p><span class="pLift">phpwind移动版</span><span class="pRight">∨</span></p>
+        <p><span class="pLift">phpwind站长区</span><span class="pRight">∨</span></p>
+        <p><span class="pLift">phpwind站务区</span><span class="pRight">∨</span></p>
+      </div>
+    </div>
+</div>
+  <% include bottom.ejs %>
+  </body>
+
+  <script type="text/javascript">
+    $.jqPaginator('#pagination1', {
+      totalPages: 8,
+      visiblePages: 5,
+      currentPage: 1,
+      onPageChange: function (num, type) {
+        // $('#p1').text(type + '：' + num);
+        $.ajax({
+          url:'/getData',
+          type:'get', //GET
+          async:true, //或false,是否异步
+          data:{num:num },
+          timeout:5000,    //超时时间
+          dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+          success:function(bz,ps,textStatus,jqXHR){
+             console.log(bz);
+            console.log(ps);
+            //  console.log(textStatus)
+            // console.log(jqXHR)
+            $(".div56").empty();
+              for(var i=0;i<bz.length;i++){
+                  var div=$("<div class='bian1'></div>")
+                    $("<input type='hidden'>").val("bz[i].id").appendTo(div);
+                    $("<h4></h4>").text(bz[i].zhuti).appendTo(div);
+                    $("<p></p>").text(bz[i].name).appendTo(div);
+                    $("<a href='/banzhuone/bz[i].id'>").text('写评论').appendTo(div);
+                    $("<span></span>").text('评论：').appendTo(div);
+                    for(var j=0;j<ps.length;j++){
+                      if(bz[i].id==ps[j].ida){
+                        $("<p></p>").text(ps[i].pingluna).appendTo(div);
+                      }
+                    }
+              }
+            $(".div56").append(tr);
+          }
+        })
+      }
+    });
+  </script>
+
+
+</html>

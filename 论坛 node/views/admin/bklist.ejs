@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+	
+	<a href="/admin/addbk">添加板块</a>
+     <table> 
+          <thead> 
+              <tr> 
+                   <th>id</th>
+                   <th>name</th>
+                   <th>操作</th>
+
+              </tr>
+
+          </thead>
+          <tbody> 
+             <% for(var i=0;i<lt.length;i++){ %>
+               <tr> 
+                    <td><%= lt[i].id %></td>
+                    <td><%= lt[i].name %></td>
+                    <td>编辑</td>
+
+
+               </tr>
+             <% } %>
+          </tbody>
+
+
+     </table>
+
+
+
+
+
+
+</body>
+</html>

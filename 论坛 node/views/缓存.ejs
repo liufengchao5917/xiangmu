@@ -1,0 +1,39 @@
+$(".div56").empty();
+for(var i=0;i<data.length;i++){
+var tr = 	$("<tr></tr>");
+$("<td></td>").text(data[i].id).appendTo(tr);
+$("<td></td>").text(data[i].name).appendTo(tr);
+$("<td></td>").text(data[i].password).appendTo(tr);
+//              $("<td></td>").text(data[i].sex).appendTo(tr);
+$(".list table tbody").append(tr);
+}
+
+<% for(var i=0;i<bz.length;i++){ %>
+<div class="bian1">
+  <input type="hidden" value="<%= bz[i].id %>">
+  <h4><%- bz[i].zhuti %></h4>
+  <p><%- bz[i].name %></p>
+  <a href="/banzhuone/<%= bz[i].id %>">写评论</a>
+
+  <p><span>评论：</span>
+    <% for(var j=0;j<ps.length;j++){ %>
+    <% if(bz[i].id==ps[j].ida){ %>
+    <%= ps[j].pingluna %>
+    <% } %>
+    <% } %>
+  </p>
+</div>
+<% } %>
+
+
+$("<input type='hidden'>").val("bz[i].id")
+$("<h4></h4>").text(bz[i].zhuti).appendTo();
+$("<p></p>").text(bz[i].name).appendTo();
+$("<a href='/banzhuone/bz[i].id'>").text('写评论').appendTo();
+  $("<span></span>").text('评论：');
+  for(var j=0;j<ps.length;j++){
+  if(bz[i].id==ps[j].ida){
+  $("<p></p>").text(ps[i].pingluna).appendTo();
+  }
+  }
+  )

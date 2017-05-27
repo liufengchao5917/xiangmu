@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/css/index2.css' />
+  </head>
+  <body>
+    <% include haeds.ejs %>
+    <div class="div0 clsarfix">
+      <div class="div1">
+        <ul class="bodyUl1 clsarfix">
+          <li><a href="#">今日:6</a><span>&nbsp;|&nbsp;</span></li>
+          <li><a href="#">昨日:9</a><span>&nbsp;|&nbsp;</span></li>
+          <li><a href="#">最高日:557035</a><span>&nbsp;|&nbsp;</span></li>
+          <li><a href="#">帖子:15767869</a><span>&nbsp;|&nbsp;</span></li>
+          <li><a href="#">会员:2367680</a><span>&nbsp;|&nbsp;</span></li>
+          <li><a href="#">新会员:qcmwx</a></li>
+        </ul>
+      </div>
+        <% for(var i=0;i<tt.length;i++){ %>
+        <%- tt[i].name %>
+        <% } %>
+    </div>
+    <% include bottom.ejs %>
+  </body>
+</html>

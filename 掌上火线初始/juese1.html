@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-size: 0.3rem;}
+        .clsarfix:after{
+            content:'';
+            display:block;
+            clear: both;
+            font-size: 0;
+            visibility: hidden;
+            height: 0;
+        }
+        .div110{ position:fixed;width: 100%}
+        .div1{background: url("../tu/IMG_2342_01_01.jpg") ;width: 100%}
+        .div1 *{float: left;margin-top: 1rem;color: #ffffff;}
+        .div1 img{margin-left:0.2rem}
+        .div1 p{font-size: 0.5rem;margin-left: 1.3rem}
+        .div11 li{float: left;font-size: 0.3rem;margin:0.33rem 0.7rem;  }
+        .div10 img {width: 100%;margin-bottom: -0.1rem;margin-top: 0.2rem}
+        .div401{height:0.3rem;background-color: #e3e4e6}
+        .div111>span{float: left;margin:0.2rem 0 0.2rem 0.6rem;padding-right:0.6rem;color: #878787;border-right: 1px solid silver;}
+        .div111>span>span{color: #ff2e2e;font-size: 0.3rem;}
+        .div111 p{font-size: 0.3rem;text-align: center;color: #545454  }
+        .div111 :nth-of-type(3){border: 0}
+        .div112 p{float: left;margin: 0.2rem }
+        .div112 :nth-of-type(2){float: right;margin: 0.2rem}
+        .div113 li{float: left;margin: 0.2rem 0 0.2rem 0.2rem}
+        .div113 p{margin-bottom: 0.1rem}
+        .div113 span{color:#C0C0C0}
+        .div113 :nth-of-type(3),.div113 :nth-of-type(4){color: #17b825}
+
+    </style>
+</head>
+<body>
+<div class="div110" >
+    <div class="div1 clsarfix">
+        <img src="../tu/IMG_2348_03_03.jpg" alt="">
+        <p>端游专区</p>
+    </div>
+</div>
+<br/><br/><br/><br/>
+<div class="div10"><img src="../tu/IMG_2356_02.jpg" alt=""></div>
+<div class="div11 clsarfix">
+    <ul>
+        <li>战绩</li>
+        <li>资产</li>
+        <li>记录</li>
+    </ul>
+</div>
+<hr/>
+<div class="div111 clsarfix">
+    <span><p>总杀敌</p><span>35611</span></span>
+    <span><p>胜率</p><span>53.27%</span></span>
+    <span><p>KD值</p><span>1.67</span></span>
+</div>
+<hr class="div401"/>
+<div>
+    <div class="div112 clsarfix">
+        <p>最近战绩</p>
+        <p>2017.01.31</p>
+    </div>
+    <hr/>
+    <div class="div113">
+        <ul class="clsarfix">
+            <li><img src="../tu/IMG_2356_05.jpg" alt=""></li>
+            <li><p>守望之城|20:29</p><span>特殊战</span></li>
+            <li><p>37/34</p><span>杀/死</span></li>
+            <li><p>1.1</p><span>KD值</span></li>
+        </ul>
+        <hr/>
+    </div>
+    <div class="div113">
+        <ul class="clsarfix">
+            <li><img src="../tu/IMG_2356_08.jpg" alt=""></li>
+            <li><p>沙漠要塞|15:07</p><span>生化剑客模式</span></li>
+            <li><p>50/0</p><span>杀/死</span></li>
+            <li><p>50.0</p><span>KD值</span></li>
+        </ul>
+        <hr/>
+    </div>
+    <br/><br/><br/><br/>
+
+</div>
+
+
+
+
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<script>
+
+</script>
+</body>
+</html>
